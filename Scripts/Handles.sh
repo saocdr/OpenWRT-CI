@@ -32,7 +32,7 @@ FIX "theme-argon" "$ARGON_FILE" sed -i "s/primary '.*'/primary '#31a1a1'/g; s/'0
 
 #修改aurora菜单式样
 AURORA_PATH="$PACKAGE_PATH/luci-app-aurora-config/root/usr/share/aurora"
-FIX "theme-aurora" "$AURORA_PATH" find "AURORA_PATH" -type f -name '*.template' -exec sed -i \
+FIX "theme-aurora" "$AURORA_PATH" find "$AURORA_PATH" -type f -name '*.template' -exec sed -i \
 	"s/nav_type '.*'/nav_type 'dropdown'/g; s/struct_radius_base '.*'/struct_radius_base '0.125rem'/g" {} +
 
 #修改mini-diskmanager菜单位置
